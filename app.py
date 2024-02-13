@@ -36,3 +36,11 @@ def addStoreItems(name):
             return {"message":"Successfully added items","data":stores},200
 
     return { "message":"Invalid Name, Store not found"},404
+
+@app.post('/stores/<string:name>')
+def getIndivisdualStore(name):
+    for item in stores:
+        if item['name'] == name:
+            return {"message":"Successfully added items","data":item},200
+
+    return { "message":"Invalid Name, Store not found"},404

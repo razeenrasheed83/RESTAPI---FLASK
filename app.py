@@ -64,3 +64,10 @@ def getIndivisdualStore(store_id):
     #         return {"message":"Successfully added items","data":item},200
 
     # return { "message":"Invalid Name, Store not found"},404
+
+@app.post('/stores/<string:store_id>')
+def getIndivisdualStore(store_id):
+    try:
+        return stores[store_id]
+    except KeyError:
+        return {"message":"Invalid Name, Store not found"} 

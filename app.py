@@ -71,3 +71,4 @@ def getIndivisdualStore(store_id):
         return stores[store_id]
     except KeyError:
         return {"message":"Invalid Name, Store not found"} 
+        return {"message":"Invalid Name, Store not found"} 
